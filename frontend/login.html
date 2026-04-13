@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Přihlášení – StudentBook</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>StudentBook</h1>
+  <nav>
+    <a href="login.html" class="guest-only">Přihlášení</a>
+    <a href="register.html" class="guest-only">Registrace</a>
+    <a href="wall.html" class="auth-only">Zeď</a>
+    <a href="users.html" class="auth-only">Uživatelé</a>
+    <button id="logoutBtn" class="auth-only">Odhlásit</button>
+  </nav>
+</header>
+
+<main>
+  <div class="card">
+    <h2>Přihlášení</h2>
+    <form id="loginForm">
+      <div>
+        <label>Přihlašovací jméno</label>
+        <input type="text" id="username" required>
+      </div>
+      <div>
+        <label>Heslo</label>
+        <input type="password" id="password" required>
+      </div>
+      <button type="submit">Přihlásit</button>
+    </form>
+    <p style="margin-top:10px;font-size:13px;">
+      Nemáš účet? <a href="register.html">Registruj se</a>.
+    </p>
+    <p id="loginError" style="color:#b91c1c;margin-top:8px;font-size:13px;"></p>
+  </div>
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/auth.js"></script>
+<script>
+  setupMenu();
+</script>
+</body>
+</html>

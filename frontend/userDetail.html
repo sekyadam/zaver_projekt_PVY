@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Detail uživatele – StudentBook</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>StudentBook</h1>
+  <nav>
+    <a href="wall.html" class="auth-only">Zeď</a>
+    <a href="users.html" class="auth-only">Uživatelé</a>
+    <a href="login.html" class="guest-only">Přihlášení</a>
+    <a href="register.html" class="guest-only">Registrace</a>
+    <button id="logoutBtn" class="auth-only">Odhlásit</button>
+  </nav>
+</header>
+
+<main>
+  <div class="card" id="userInfoCard">
+    <h2>Uživatel</h2>
+    <div id="userInfo"></div>
+  </div>
+
+  <div class="card">
+    <h3>Příspěvky uživatele</h3>
+    <div id="userPosts"></div>
+  </div>
+
+  <div class="card">
+    <h3>Příspěvky, které uživatel lajknul nebo komentoval</h3>
+    <div id="userActivityPosts"></div>
+  </div>
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/users.js"></script>
+<script>
+  requireAuth();
+  setupMenu();
+</script>
+</body>
+</html>
