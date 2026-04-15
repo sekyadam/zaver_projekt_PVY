@@ -6,38 +6,37 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <header>
   <h1>StudentBook</h1>
   <nav>
     <a href="wall.html" class="auth-only">Zeď</a>
     <a href="users.html" class="auth-only">Uživatelé</a>
-    <a href="login.html" class="guest-only">Přihlášení</a>
-    <a href="register.html" class="guest-only">Registrace</a>
     <button id="logoutBtn" class="auth-only">Odhlásit</button>
   </nav>
 </header>
 
 <main>
+
   <div class="card">
-    <h2>Nový příspěvek</h2>
+    <h2 style="margin-bottom:10px;">Nový příspěvek</h2>
+
     <form id="newPostForm">
-      <div>
-        <label>Nadpis</label>
-        <input type="text" id="postTitle" required>
-      </div>
-      <div>
-        <label>Text</label>
-        <textarea id="postText" required></textarea>
-      </div>
-      <div>
-        <label>Obrázek (volitelné)</label>
-        <input type="file" id="postImage" accept="image/*">
-      </div>
-      <button type="submit">Přidat příspěvek</button>
+      <label>Nadpis</label>
+      <input type="text" id="postTitle" required>
+
+      <label>Text</label>
+      <textarea id="postText" required></textarea>
+
+      <label>Obrázek (volitelné)</label>
+      <input type="file" id="postImage" accept="image/*">
+
+      <button type="submit" style="margin-top:10px;">Přidat příspěvek</button>
     </form>
   </div>
 
   <div id="postsContainer"></div>
+
 </main>
 
 <script src="js/common.js"></script>
@@ -46,5 +45,6 @@
   requireAuth();
   setupMenu();
 </script>
+
 </body>
 </html>
